@@ -6,7 +6,7 @@ public class BankAccountTest {
 
     @Test
 
-    void bankAccount(){
+    void deposit(){
 //        Given
         BankAccount bankAccount = new BankAccount("Nathan", "Parmar", "22/12/00", 0, 11111);
 //        when
@@ -15,6 +15,31 @@ public class BankAccountTest {
         int expected = 100;
         assertThat(result).isEqualTo(expected);
 
-
     }
+
+    @Test
+
+    void withdrawal(){
+
+        BankAccount bankAccount = new BankAccount("Nathan", "Parmar", "22/12/00", 0, 11111);
+        bankAccount.withdrawal(100);
+        int result = bankAccount.getBalance();
+        int expected = -100;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+
+    void payInterest(){
+
+        BankAccount bankAccount = new BankAccount("Nathan", "Parmar", "22/12/00", 0, 11111);
+        bankAccount.withdrawal(100);
+        int result = bankAccount.getBalance();
+        int expected = -100;
+        assertThat(result).isEqualTo(expected);
+    }
+
+
+
+
 }
