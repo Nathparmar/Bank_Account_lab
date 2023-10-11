@@ -21,10 +21,10 @@ public class BankAccountTest {
 
     void withdrawal(){
 
-        BankAccount bankAccount = new BankAccount("Nathan", "Parmar", "22/12/00", 0, 11111);
+        BankAccount bankAccount = new BankAccount("Nathan", "Parmar", "22/12/00", 100, 11111);
         bankAccount.withdrawal(100);
         int result = bankAccount.getBalance();
-        int expected = -100;
+        int expected = 0;
         assertThat(result).isEqualTo(expected);
     }
 
@@ -32,10 +32,10 @@ public class BankAccountTest {
 
     void payInterest(){
 
-        BankAccount bankAccount = new BankAccount("Nathan", "Parmar", "22/12/00", 0, 11111);
-        bankAccount.withdrawal(100);
+        BankAccount bankAccount = new BankAccount("Nathan", "Parmar", "22/12/00", 100, 11111);
+        bankAccount.payInterest();
         int result = bankAccount.getBalance();
-        int expected = -100;
+        int expected = 105;
         assertThat(result).isEqualTo(expected);
     }
 

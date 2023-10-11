@@ -11,7 +11,7 @@ private int accountNumber;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
-        this.balance = 0;
+        this.balance = balance;
         this.accountNumber = accountNumber;
     }
 
@@ -67,9 +67,11 @@ private int accountNumber;
         this.balance -= amount;
     }
 
-    public void payInterest(int amount){
-        this.balance * 1.05 = balance;
+   public void payInterest(){
+        this.balance *= 1.05;
     }
+
+
 
 
 
